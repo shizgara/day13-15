@@ -1,0 +1,119 @@
+.contact-info{
+    background-color:$primary-1;
+    .row{
+        align-items: center;
+        padding: 15px 0;
+    }
+    p{
+        @include font($primary-4,$font-regular,20px);
+        span{
+            font-family:$font-thin;
+        }
+    }
+   
+}
+header{
+    .social{
+        a{
+            @include font($base-light,$font-regular,20px);
+            text-transform:uppercase;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            span{
+                margin-left: 10px;
+            }
+        }
+    .sprite{
+        background-image: url('../../../img/sprite/css_sprites.png');
+        display: inline-block;
+    }
+    .login{
+        width: 41px; height: 25px;
+        background-position: -10px -10px;
+     }
+     .chat{
+        width: 51px; height: 30px;
+        background-position:  -10px -55px;
+     }
+    }
+    nav{
+
+        background-color: $primary-3;
+        position: relative;
+        ul{
+            padding: 0;
+            display: flex;
+            align-items: stretch;
+            list-style-type: none;
+            width: 100%;
+            text-align: center;
+            li{
+                flex-grow: 1;
+                padding: 10px 0;
+                position: relative;
+                span{
+                    color:$primary-4;
+                    position: absolute;
+                    right: -3px;
+                }
+                .line-left{
+                    left:0;
+                    width: 1px;
+                }
+                a{
+                    @include font($base-light,$font-regular,18px);
+                    text-decoration: none;
+                    text-transform: uppercase;                
+                    display: inline-block;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            li:hover{
+                background-color: $primary-4;
+                a{
+                    color:$primary-3;
+                }
+                span{
+                    right:0;
+                }
+
+            }
+        }
+    }
+    .burger,.burger::after,.burger::before{
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+    }
+    .burger::after{
+        content: '';
+        top:-8px;
+        
+    }
+    .burger::before{
+        content: '';
+        top:8px;
+       
+    }
+    p{
+        @include font($primary-4,$font-regular,16px);
+        span{
+            font-family:$font-thin;
+        }
+    }
+    .menu{
+        box-shadow: 0 2px 15px $base-dark;
+    }
+    @media screen and (max-width:1024px) {
+        .row{
+            padding:10px 0;
+        }
+    }
+    @media screen and (max-width:1200px) {
+       
+    }
+}
+

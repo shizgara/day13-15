@@ -1,0 +1,153 @@
+.banner{
+    background: url(../../../img/banner.png) center no-repeat;
+    background-size: cover;
+    padding: 30px 15px 25px;
+    .block-tringle{
+        filter: drop-shadow(5px 5px 3px lighten($base-dark,70%));
+        margin: 25px 0;
+        h1{
+            background-color: $primary-4;
+            padding: 20px 45px;
+            @include font($primary-3,$font-bold,36px);
+        }
+        @media (max-width:320px) {
+            h1{
+                @include font($primary-3,$font-bold,24px);
+                padding: 10px 20px;
+            }  
+            div{
+                border-top: 18px solid $primary-4;
+                border-right: 18px solid transparent;
+            }
+        }
+        div{
+            width: 0; 
+            height: 0;
+            border-top: 30px solid $primary-4;
+            border-right: 30px solid transparent;
+        }
+       
+    }
+    h1,h3,ul{
+        padding-left: 45px;
+    }
+    @media (max-width:320px) {
+        h1,h3,ul{
+            padding-left: 20px;
+        }
+        h3{
+            @include font($base-dark,$font-medium,18px);
+        }
+        ul{
+
+            @include font($base-dark,$font-medium,14px);
+            margin: 10px 0;
+        }
+        .block-tringle{
+            margin: 5px 0;
+        }
+    }
+    h3{
+        @include font($base-dark,$font-medium,22px);
+        text-transform: uppercase;
+    }
+    ul{
+        list-style-type: none;
+        @include font($base-dark,$font-medium,18px);
+        margin: 30px 0;
+
+        li{
+            margin-bottom: 15px;
+            position: relative;
+        }
+        li::before{
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $primary-3;
+            position: absolute;
+            top: 5px;
+            left: -20px;
+        }
+    }
+
+    .button{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 15px;
+
+        button{
+            background: none;
+            border: solid 1px $primary-3;
+            @include font($primary-3,$font-regular,18px);
+            text-align: center;
+            padding:15px 0;
+        }
+    }
+  
+}
+@media (max-width:1024px){
+    .banner{
+        background: url(../../../img/banner-table.png) center no-repeat;
+        background-size: auto 100%;
+    }
+}
+@media (max-width:768px){
+    .banner{
+        background:url(../../../img/bg-mobbile.png) $base-light center -120px no-repeat;
+    }
+}
+
+/*Mobbile*/
+@media (max-width:768px){
+.banner{
+        position: relative;
+        padding: 0;
+    .block-tringle{
+        margin: 0;
+    }
+    .icon-button{
+        position: absolute;
+        z-index: 1;
+        top: 50px;
+        right:5px;
+        div{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-image: url(../../../img/sprite/sprite_mobille.png);
+            background-color: $primary-3;
+            border: solid 2px rgba(1,48,86,.3);
+            margin-bottom: 10px;
+        }
+        .icon-1{
+            background-position: -8px -2px;
+        }
+        .icon-2{
+            background-position: -8px -53px;
+        }
+        .icon-3{
+            background-position: -4px -106px;
+            background-color: $primary-1;
+        }
+    }
+    .block-tringle{
+       
+       p{
+            background-color: $primary-4;
+            padding: 5px 0px 5px 5px;
+            @include font($primary-3,$font-regular,18px);
+        }
+        div{
+            width: 0; 
+            height: 0;
+            border-top: 30px solid $primary-4;
+            border-right: 30px solid transparent;
+        }
+       
+    }
+}
+
+}
